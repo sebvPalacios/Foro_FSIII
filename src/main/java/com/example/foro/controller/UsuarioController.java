@@ -11,10 +11,10 @@ import com.example.foro.service.UsuarioService;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestParam;
 
 import com.example.foro.model.Usuario;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 
 
@@ -41,7 +41,11 @@ public class UsuarioController {
     public Usuario crearUsuario(@RequestBody Usuario usuario) {        
         return usuarioService.crearUsuario(usuario);
     }
-        
+
+    @PutMapping("/{id}")
+    public Usuario actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuario){
+        return usuarioService.actualizarUsuario(id, usuario);
+    }
 }
 
 

@@ -14,4 +14,7 @@ public interface UsuarioService {
 
     // crear un usuario
     Usuario crearUsuario(Usuario usuario);
+
+    // Actualizar usuario
+    Usuario actualizarUsuario(Long id, Usuario usuario);
 }
