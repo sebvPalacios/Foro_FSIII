@@ -7,6 +7,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.persistence.GenerationType;
 
+// Creamos la base de datos, entidad llamada Usuario
 @Entity
 @Table(name = "usuario")
 public class Usuario {
