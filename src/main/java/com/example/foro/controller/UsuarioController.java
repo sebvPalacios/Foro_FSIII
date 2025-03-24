@@ -9,6 +9,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.example.foro.service.UsuarioService;
 
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 
@@ -45,6 +46,11 @@ public class UsuarioController {
     @PutMapping("/{id}")
     public Usuario actualizarUsuario(@PathVariable Long id, @RequestBody Usuario usuario){
         return usuarioService.actualizarUsuario(id, usuario);
+    }
+
+    @DeleteMapping("/{id}")
+    public void eliminarUsuario(@PathVariable Long id){
+        usuarioService.eliminarUsuario(id);
     }
 }
 

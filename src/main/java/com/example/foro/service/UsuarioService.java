@@ -17,4 +17,7 @@ public interface UsuarioService {
 
     // Actualizar usuario
     Usuario actualizarUsuario(Long id, Usuario usuario);
+
+    // Eliminar un usuario
+    void eliminarUsuario(Long id);
 }
